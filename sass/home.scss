@@ -24,13 +24,23 @@
 
 .hero {
     height: 100vh;
-    @include cool-bg($rojo, $yellow);
+    background-image: url('/img/bg-1.jpg');
+    background-position: center;
+    background-size: cover;
     h1 {
-        color: #fff;
+        color: #000;
         font-weight: bold;
     }
 }
 
+.green-btn {
+    background-color: $green;
+    border-color: darken($color: $green, $amount: 25%);
+}
+.yellow-btn {
+    background-color: $yellow;
+    border-color: darken($color: $yellow, $amount: 25%);
+}
 
 .benefict {
     padding-top: 4rem;
@@ -41,6 +51,31 @@
     }
 }
 
+.b-content {
+    justify-content: space-around;
+    color: #fff;
+    .b-info {
+        h2 {
+            font-weight: bold;
+        }
+    }
+    .b-img{ 
+        img {
+            height: 40vh;
+            border-radius: 1rem;
+        }
+    }
+}
+
+.b-img-svg {
+    img {
+        height: 50vh;
+    }
+}
+
 .b-1 {
-    background-color: $yellow;
+    background-color: $green;
+}
+.b-2 {
+    background-color: $rojo;
 }
