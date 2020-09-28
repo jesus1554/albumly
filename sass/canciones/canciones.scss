@@ -1,0 +1,43 @@
+@import '../common/common';
+
+.site-navigation {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+ 
+.search-section {
+    flex-basis: calc(90% - 1rem);
+    display: flex;
+    align-items: center;
+}
+
+.search-results {
+    article {
+        display: flex;
+        align-items: center;
+        img {
+            height: 15rem;
+            border-radius: 0.5rem;
+        }
+        margin: 2rem auto;
+    }
+    .song-data {
+        display: flex;
+        align-items: center;
+        .sng-pack {
+            display: flex;
+            flex-direction: column;
+            h3 {
+                font-size: 3.2rem;
+                font-weight: bold;
+            }
+            h4 {
+                font-weight: normal;
+            }
+            margin: 1rem 2rem;
+        }
+    }
+}

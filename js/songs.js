@@ -19,7 +19,6 @@ document.addEventListener('DOMContentLoaded', () => {
             .then(response => response.json())
             .then(data => {
                 showSearch(data.data)
-                
             })
         results = ''
     })
@@ -28,19 +27,31 @@ document.addEventListener('DOMContentLoaded', () => {
         const rawResults = data;
 
         rawResults.forEach(o => {
-            let card = ` <article>
-            <img
-            src="${o.artist.picture_medium}">
-            
-            <div class="artist-data-pv">
-            <h4>${o.artist.name}</h4>
-            <p>Último Hit: <i>${o.title_short}</i></p>
-            <a class="blue-button" target="_blank" href="https://www.deezer.com/mx/artist/${o.artist.id}">Ver Discografía</a>
+            const explicit = (song) => {
+                if (song) {
+                    return "Sí"    
+                } else {
+                    return "No"
+                }
+            }
+            let card = `<article>
+            <img src="${o.album.cover_big}">
+            <div class="song-data">
+                <article class="sng-pack">
+                    <h3>${o.title}</h3>
+                    <h4>Autor: ${o.artist.name}</h4>
+                </article>
+                <article class="sng-pack">
+                    <p>Letras Explícitas: ${explicit(o.explicit_lyrics)}</p>
+                    <b>Álbum: ${o.album.title}</b>
+                </article>
+                <div class="sng-pack">
+                        <a class="blue-button" href="https://free-mp3-download.net/download.php?id=${o.id}" target="_blank">Descargar</a>
+                </div>
             </div>
-            </article>
-            `
+        </article>`
             results += card
         })
         resultsContainer.innerHTML = results
     }
-});
+})

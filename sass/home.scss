@@ -1,3 +1,46 @@
 @import 'common/common';
 
+.home-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
+    position: sticky;
+    top: 0;
+    z-index: 2;
+
+    background-color: #fff;
+    .logo {
+        padding: 1rem;
+    }
+    .links {
+        display: flex;
+        a {
+            color: #333 !important;
+            margin: 0.5rem 2rem;
+        }
+    }
+}
+
+.hero {
+    height: 100vh;
+    @include cool-bg($rojo, $yellow);
+    h1 {
+        color: #fff;
+        font-weight: bold;
+    }
+}
+
+
+.benefict {
+    padding-top: 4rem;
+    padding-bottom: 0;
+    svg {
+        width: 100%;
+        display: block;
+    }
+}
+
+.b-1 {
+    background-color: $yellow;
+}

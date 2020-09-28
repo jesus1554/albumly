@@ -15,10 +15,35 @@ $purple: #6a4c93;
 // Common styles
 
 .logo {
-    p {
-        color: $rojo;
+    a {
+        color: $rojo !important;
         font-size: 4rem;
         font-weight: bolder;
         margin-right: 1rem;
     }
+}
+
+@mixin cool-bg($color-a, $color-b) {
+    background: linear-gradient(163deg, $color-a, $color-b);
+    background-size: 400% 400%;
+
+    -webkit-animation: Animation-header 8s ease infinite;
+    -moz-animation: Animation-header 8s ease infinite;
+    animation: Animation-header 8s ease infinite;
+}
+
+@-webkit-keyframes Animation-header {
+    0%{background-position:32% 0%}
+    50%{background-position:69% 100%}
+    100%{background-position:32% 0%}
+}
+@-moz-keyframes Animation-header {
+    0%{background-position:32% 0%}
+    50%{background-position:69% 100%}
+    100%{background-position:32% 0%}
+}
+@keyframes Animation-header {
+    0%{background-position:32% 0%}
+    50%{background-position:69% 100%}
+    100%{background-position:32% 0%}
 }
