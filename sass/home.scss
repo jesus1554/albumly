@@ -79,3 +79,13 @@
 .b-2 {
     background-color: $rojo;
 }
+
+.home-footer {
+    background-color: $purple;
+    padding: 3rem auto;
+    a {
+        color: #fff !important;
+        font-size: 3rem;
+        padding: 4rem 1rem;
+    }
+}
