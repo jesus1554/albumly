@@ -10,14 +10,21 @@
 </head>
 
 <body>
-    <nav class="home-navbar with-shadow">
+    <nav class="navbar with-shadow">
         <div class="logo">
             <a href="/">Albumly</a>
         </div>
+        <a class="toggle-btn">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </a>
         <div class="links">
-            <a href="canciones">Canciones</a>
-            <a href="album">Álbumes</a>
-            <a href="artistas">Artistas</a>
+            <nav>
+                <a href="canciones">Canciones</a>
+                <a href="album">Álbumes</a>
+                <a href="artistas">Artistas</a>
+            </nav>
         </div>
     </nav>
     <header class="hero center-center-v">
@@ -64,5 +71,18 @@
         </div>
     </footer>
 </body>
-
+<script>
+    const navSlide = () => {
+        const burger = document.querySelector('.toggle-btn');
+        const nav = document.querySelector('.links');
+    
+        burger.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        })
+    };
+    
+    document.addEventListener('DOMContentLoaded', function() {
+        navSlide()
+    });
+</script>
 </html>
