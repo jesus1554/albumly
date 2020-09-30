@@ -1,18 +1,5 @@
 @import '../common/common';
 
-.site-navigation {
-    width: 90%;
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
- 
-.search-section {
-    flex-basis: calc(90% - 1rem);
-    display: flex;
-    align-items: center;
-}
 
 .search-results {
     display: grid;

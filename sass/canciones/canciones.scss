@@ -1,18 +1,5 @@
 @import '../common/common';
 
-.site-navigation {
-    width: 90%;
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
- 
-.search-section {
-    flex-basis: calc(90% - 1rem);
-    display: flex;
-    align-items: center;
-}
 
 .search-results {
     article {
@@ -23,6 +10,14 @@
             border-radius: 0.5rem;
         }
         margin: 2rem auto;
+
+        @media (max-width: 870px) {
+            flex-direction: column;
+            img {
+                height: auto;
+                width: 80%;
+            }
+        }
     }
     .song-data {
         display: flex;
@@ -38,6 +33,13 @@
                 font-weight: normal;
             }
             margin: 1rem 2rem;
+        }
+        
+        @media (max-width: 870px) {
+            flex-direction: column;
+            * {
+                text-align: center;
+            }
         }
     }
 }

@@ -23,27 +23,27 @@ $purple: #6a4c93;
     }
 }
 
-@mixin cool-bg($color-a, $color-b) {
-    background: linear-gradient(163deg, $color-a, $color-b);
-    background-size: 400% 400%;
-
-    -webkit-animation: Animation-header 8s ease infinite;
-    -moz-animation: Animation-header 8s ease infinite;
-    animation: Animation-header 8s ease infinite;
+.site-navigation {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media (max-width: 700px) {
+        flex-direction: column;
+    }
+}
+ 
+.search-section {
+    flex-basis: calc(90% - 1rem);
+    display: flex;
+    align-items: center;
 }
 
-@-webkit-keyframes Animation-header {
-    0%{background-position:32% 0%}
-    50%{background-position:69% 100%}
-    100%{background-position:32% 0%}
-}
-@-moz-keyframes Animation-header {
-    0%{background-position:32% 0%}
-    50%{background-position:69% 100%}
-    100%{background-position:32% 0%}
-}
-@keyframes Animation-header {
-    0%{background-position:32% 0%}
-    50%{background-position:69% 100%}
-    100%{background-position:32% 0%}
+.content {
+    h1 {
+        @media (max-width: 700px) {
+            line-height: 1.2;
+        }
+    }
 }
